@@ -1,95 +1,48 @@
 import Image from "next/image";
+import Navbar from "./lib/components/navbar";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      <Navbar />
+      <Image
+        src="/mountain.png"
+        alt="Background"
+        fill
+        priority
+        className={styles.image}
+      />
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+      <div className={styles.textContainer}>
+        <div className={styles.overlayText}>
+          <h1>Welcome!</h1>
+          <p>
+            Hi, I'm Mohammad. <br />
+            I'm a rising-junior at Stuy.
+            I specialize in Python, Java, and Web Development with React and NextJS
+          </p>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className={styles.funFacts}>
+          <h2>Fun Facts</h2>
+          <ul>
+            <li>🎓 I attend Stuyvesant High School in NYC</li>
+            <li>💻 I'm a software engineer at StuyPulse</li>
+            <li>📐 My favorite subjects at school are math and history</li>
+            <br />
+            <li>☕ I'm fueled by coffee most school mornings</li>
+            <li>📚 I enjoy reading and studying texts</li>
+            <li>🌐 I develop websites for fun and love learning new stuff</li>
+            <li>📷 I occasionally like to take pictures of beautiful scenery</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className={styles.pageLinks}>
+        <a href="/pages/projects" className={styles.linkButton}>View Projects</a>
+        <a href="/pages/about" className={styles.linkButton}>About Me</a>
+      </div>
     </div>
   );
 }
