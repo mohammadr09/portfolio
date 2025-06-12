@@ -18,13 +18,13 @@ export default function Projects() {
 
             <div className={styles.headerSection}>
                 <h1>My Projects</h1>
-                <p>Here are a few things I’ve built or am working on!</p>
+                <p>Here are a few things I&rsquo;ve built or am working on!</p>
             </div>
 
             <div className={styles.projectGrid}>
                 <div className={styles.card}>
                     <h2>Portfolio Site</h2>
-                    <p>The very website you're looking at! Built with <b>NextJS</b> and <b>TypeScript</b>.</p>
+                    <p>The very website you&apos;re looking at! Built with <b>NextJS</b> and <b>TypeScript</b>.</p>
                     <a href="https://github.com/mohammadr09/portfolio" rel="noopener noreferrer" target="_blank">View Code</a>
                 </div>
 
