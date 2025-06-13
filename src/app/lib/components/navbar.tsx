@@ -1,20 +1,27 @@
-import Link from 'next/link';
-import styles from '@/app/lib/components/navbar.module.css';
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import styles from "./navbar.module.css"; // adjust path if needed
 
 export default function Navbar() {
-    return (
-        <div className={styles.navbar}>
-            <ul className={styles.ul}>
-                <li className={styles.li}>
-                    <Link href="/" className={styles.a}>Home</Link>
-                </li>
-                <li className={styles.li}>
-                    <Link href="/pages/projects" className={styles.a}>Projects</Link>
-                </li>
-                <li className={styles.li}>
-                    <Link href="/pages/about" className={styles.a}>About</Link>
-                </li>
-            </ul>
-        </div>
-    );
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(prev => !prev);
+
+  return (
+    <nav className={styles.navbar}>
+      <div className={styles.menuToggle} onClick={toggleMenu}>
+        <span className={`${styles.bar} ${menuOpen ? styles.open : ""}`}></span>
+        <span className={`${styles.bar} ${menuOpen ? styles.open : ""}`}></span>
+        <span className={`${styles.bar} ${menuOpen ? styles.open : ""}`}></span>
+      </div>
+
+      <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
+        <li><Link href="/" className={styles.a}>Home</Link></li>
+        <li><Link href="/pages/projects" className={styles.a}>Projects</Link></li>
+        <li><Link href="/pages/about" className={styles.a}>About</Link></li>
+      </ul>
+    </nav>
+  );
 }

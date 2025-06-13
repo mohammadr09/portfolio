@@ -1,0 +1,198 @@
+/* Base styles for the entire page */
+.page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: var(--font-geist-sans);
+  color: white;
+}
+
+/* Background overlay for darkening the image */
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.2));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Background image styling */
+.image {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Main text container centered on desktop */
+.textContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+  width: 90vw;
+  padding: 2.5rem 2rem;
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 2;
+  animation: fadeInUp 1s ease-out both;
+}
+
+/* Text styling inside the container */
+.overlayText h1 {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.overlayText p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+/* Fun facts styling */
+.funFacts {
+  text-align: left;
+}
+
+.funFacts h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.funFacts ul {
+  list-style: none;
+  padding-left: 1.25rem;
+}
+
+.funFacts li {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  font-weight: 400;
+}
+
+/* Buttons container */
+.pageLinks {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1.5rem;
+  z-index: 2;
+  background-color: rgba(0,0,0,0.25);
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+/* Individual button styles */
+.linkButton {
+  padding: 0.8rem 1.8rem;
+  background: none;
+  border: 2px solid white;
+  border-radius: 9999px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.linkButton:hover,
+.linkButton:focus {
+  background-color: white;
+  color: black;
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Fade-in-up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Responsive styles for tablets and smaller devices */
+@media (max-width: 768px) {
+  .page {
+    height: auto; /* allow page height to grow with content */
+    padding-bottom: 4rem; /* space for bottom links */
+  }
+
+  .textContainer {
+    position: static;
+    transform: none;
+    max-width: 600px;
+    width: 90vw;
+    margin: 3rem auto 2rem auto;
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(14px);
+    text-align: center;
+    animation: none;
+  }
+
+  .overlayText h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .overlayText p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.8rem;
+  }
+
+  .funFacts {
+    text-align: left;
+    margin-top: 1rem;
+    padding-left: 1rem;
+  }
+
+  .funFacts h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .funFacts li {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .pageLinks {
+    position: static;
+    margin: 0 auto 3rem auto;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .linkButton {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    border-width: 2px;
+  }
+}
