@@ -18,7 +18,7 @@
 .image {
   object-fit: cover;
   z-index: 0;
-  opacity: 55.75%;
+  opacity: 0.55;
   pointer-events: none;
 }
 
@@ -110,7 +110,7 @@
 }
 
 /* Responsive tweaks */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .textContainer {
     padding: 1.2rem;
     max-width: 90%;
@@ -127,5 +127,13 @@
   .pageLinks {
     flex-direction: column;
     align-items: center;
+  }
+
+  .funFacts h2 {
+    font-size: 1.25rem;
+  }
+
+  .funFacts li {
+    font-size: 0.95rem;
   }
 }
