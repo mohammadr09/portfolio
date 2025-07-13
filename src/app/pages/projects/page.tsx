@@ -51,6 +51,23 @@ export default function Projects() {
                     <a href="https://mohammadr09.github.io/ArtAppPortfolio/src/pages/main.html" rel="noopener noreferrer" target="_blank">View Website</a>
                 </div>
 
+                <div className={styles.card}>
+                    <h2>Maktabah Ibn Taymiyyah</h2>
+                    <p>
+                        It&apos;s a Islamic Bookstore website I made to practice and blend some skills together and learn new ones. I learned how to implement
+                        Stripe and Shippo's API to retrieve shipping rates. 
+
+                        <br /> <br />
+
+                        It is built with <b>NextJS</b>, <b>TypeScript</b>, <b>Tailwind CSS</b>, and <b>Firebase</b> for authentication and database, along 
+                        with <b>Stripe</b> and <b>Shippo's API</b> (for shipping rates).
+
+                        <br /> <br />
+                        <em>Note: This is a work in progress and is not a real website.</em>
+                    </p>
+                    <a href="https:/maktabahibntaymiyyah.vercel.app" rel="noopener noreferrer" target="_blank">View Website</a>
+                </div>
+
             </div>
 
             <div className={styles.backLink}>

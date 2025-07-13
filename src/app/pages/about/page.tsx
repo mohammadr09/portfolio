@@ -34,20 +34,25 @@ export default function About() {
         <p>
           I&apos;m Mohammad, a rising junior at Stuyvesant High School passionate about
           coding, math, and history.
-        </p>
-        <p>
-          I specialize in Python, Java, and web development using React and Next.js. I
-          currently work as a software engineer on StuyPulse — Stuyvesant&apos;s official
+          <br />
+          I specialize in Python, Java, and web development using React and Next.js. I am currently a 
+          software engineer on StuyPulse — Stuyvesant&apos;s official
           FIRST Robotics team.
-        </p>
-        <p>
-          I enjoy building creative, purposeful projects, whether it&apos;s a Pokedex
-          generator, this very site, or other tools that blend tech and design.
-        </p>
-        <p>
+          <br />
+          I enjoy building creative, purposeful projects that blend different techs together.
+          <br />
           Outside of programming, I like studying classic texts, exploring philosophy, and
           sometimes capturing cool photos when I stumble on beautiful scenery.
         </p>
+        <br />
+        <h3>Some Techs I can Integerate Into a NextJS Project</h3>
+        <ul>
+          <li>Firebase Authentication</li>
+          <li>Firestore Database</li>
+          <li>Stripe (for payments)</li>
+          <li>Shippo API for Finding Shipping Rates</li>
+          <li>Tailwind CSS</li>
+        </ul>
       </div>
     </div>
   );

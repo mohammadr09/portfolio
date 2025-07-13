@@ -6,6 +6,7 @@
   font-family: var(--font-geist-sans);
   color: white;
   padding-top: 4rem;
+  background-color: #0a0a0a;
 }
 
 .bgImage {
@@ -25,36 +26,50 @@
 .headerSection h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .headerSection p {
   font-size: 1.25rem;
   color: #ccc;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .aboutContent {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 820px;
   margin: 2rem auto;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
   font-size: 1.1rem;
-  line-height: 1.6;
-  color: #ddd;
+  line-height: 1.7;
+  color: #e4e4e4;
 }
 
-/* hr {
-  border: none;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin: 2rem auto;
-  width: 60%;
-} */
+.aboutContent h3 {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
 
+.aboutContent ul {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.aboutContent li {
+  list-style-type: "✅ ";
+  margin-bottom: 0.5rem;
+}
+
+/* Optional Back Link if you use it later */
 .backLink {
   position: relative;
   z-index: 2;
@@ -93,5 +108,9 @@
     padding: 1.5rem;
     font-size: 1rem;
     margin: 1rem;
+  }
+
+  .aboutContent h3 {
+    font-size: 1.1rem;
   }
 }

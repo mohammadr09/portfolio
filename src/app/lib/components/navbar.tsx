@@ -1,16 +1,16 @@
+// app/lib/components/Navbar.tsx
 "use client";
 
 import { useState } from "react";
 import Link from "next/link";
-import styles from "./navbar.module.css"; // adjust path if needed
+import styles from "./navbar.module.css";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const toggleMenu = () => setMenuOpen(prev => !prev);
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar} ${styles.desktopOnly}`}>
       <div className={styles.menuToggle} onClick={toggleMenu}>
         <span className={`${styles.bar} ${menuOpen ? styles.open : ""}`}></span>
         <span className={`${styles.bar} ${menuOpen ? styles.open : ""}`}></span>

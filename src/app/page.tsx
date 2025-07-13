@@ -1,13 +1,14 @@
+// app/page.tsx
 import Image from "next/image";
 import Navbar from "./lib/components/navbar";
 import styles from "./page.module.css";
-
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <Navbar />
+
       <Image
         src="/mountain.png"
         alt="Background"
@@ -21,8 +22,8 @@ export default function Home() {
           <h1>Welcome!</h1>
           <p>
             Hi, I&apos;m Mohammad. <br />
-            I&apos;m a rising-junior at Stuy.
-            I specialize in Python, Java, and Web Development with React and NextJS
+            I&apos;m a rising junior at Stuy.
+            I specialize in Python, Java, and Web Development with React and NextJS.
           </p>
         </div>
 
@@ -41,9 +42,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.pageLinks}>
-        <Link href="/pages/projects" className={styles.linkButton}>View Projects</Link>
-        <Link href="/pages/about" className={styles.linkButton}>About Me</Link>
+      <div className={styles.mobileFooterNav}>
+        <Link href="/pages/projects" className={styles.linkButton}>
+          Projects
+        </Link>
+        <Link href="/pages/about" className={styles.linkButton}>
+          About
+        </Link>
       </div>
     </div>
   );
