@@ -55,12 +55,12 @@ export default function Projects() {
                     <h2>Maktabah Ibn Taymiyyah</h2>
                     <p>
                         It&apos;s a Islamic Bookstore website I made to practice and blend some skills together and learn new ones. I learned how to implement
-                        Stripe and Shippo's API to retrieve shipping rates. 
+                        Stripe and Shippo&apos;s API to retrieve shipping rates. 
 
                         <br /> <br />
 
                         It is built with <b>NextJS</b>, <b>TypeScript</b>, <b>Tailwind CSS</b>, and <b>Firebase</b> for authentication and database, along 
-                        with <b>Stripe</b> and <b>Shippo's API</b> (for shipping rates).
+                        with <b>Stripe</b> and <b>Shippo&apos;s API</b> (for shipping rates).
 
                         <br /> <br />
                         <em>Note: This is a work in progress and is not a real website.</em>
